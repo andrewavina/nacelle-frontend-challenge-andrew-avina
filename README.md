@@ -9,6 +9,12 @@
 - **Node.js** (version 16 or higher recommended).
 - **Yarn classic/v1** as the package manager (due to an issue with npm and `create-react-app` at the time of development). [Issue in github](https://github.com/facebook/react/issues/31701) - related to recent React v19.
 
+### To run the app locally:
+
+1. From a terminal, run `yarn` to install all the packages
+2. Run `yarn start` to run the app in browser
+3. To see test results, run `yarn test`. Can be done in separate tab or window of terminal.
+
 **This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).** Including some of the boilerplate readme in case it's needed.
 
 ### Available Scripts
