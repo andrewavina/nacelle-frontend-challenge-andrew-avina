@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search component snapshot tests: matches snapshot for initial render 1`] = `
+<DocumentFragment>
+  <div
+    class="search-container"
+  >
+    <div
+      class="search-input-container"
+    >
+      <label
+        class="sr-only"
+        for="search-input"
+      >
+        Search
+      </label>
+      <input
+        aria-describedby="search-error"
+        class="search-input"
+        id="search-input"
+        placeholder="Search for tutorials..."
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

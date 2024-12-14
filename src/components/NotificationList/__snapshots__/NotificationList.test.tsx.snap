@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotificationList component snapshot tests matches snapshot with multiple notifications 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="notification-heading"
+    class="notification-container"
+  >
+    <h2
+      class="visually-hidden"
+      id="notification-heading"
+    >
+      Notifications
+    </h2>
+    <button
+      class="add-button"
+    >
+      Add Notification
+    </button>
+    <ul
+      class="notification-list"
+      role="list"
+    >
+      <li
+        class="notification-item"
+        role="listitem"
+        tabindex="0"
+      >
+        Notification 1
+      </li>
+      <li
+        class="notification-item"
+        role="listitem"
+        tabindex="0"
+      >
+        Notification 2
+      </li>
+    </ul>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`NotificationList component snapshot tests matches snapshot with no notifications 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="notification-heading"
+    class="notification-container"
+  >
+    <h2
+      class="visually-hidden"
+      id="notification-heading"
+    >
+      Notifications
+    </h2>
+    <button
+      class="add-button"
+    >
+      Add Notification
+    </button>
+    <p
+      class="empty-notification"
+    >
+      No notifications
+    </p>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`NotificationList component snapshot tests matches snapshot with one notification 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="notification-heading"
+    class="notification-container"
+  >
+    <h2
+      class="visually-hidden"
+      id="notification-heading"
+    >
+      Notifications
+    </h2>
+    <button
+      class="add-button"
+    >
+      Add Notification
+    </button>
+    <ul
+      class="notification-list"
+      role="list"
+    >
+      <li
+        class="notification-item"
+        role="listitem"
+        tabindex="0"
+      >
+        Test Notification
+      </li>
+    </ul>
+  </section>
+</DocumentFragment>
+`;

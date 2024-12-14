@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import NotificationList from "./components/NotificationList/NotificationList";
+import Search from "./components/Search/Search";
+import "./App.css";
 
-function App() {
+const App: React.FC = () => {
+  const [currentView, setCurrentView] = useState<"notifications" | "Search">(
+    "notifications"
+  );
+
+  const handleSearch = (query: string) => {
+    console.log("Search query:", query);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="app-container">
+      <h1 className="app-title">
+        Frontend Engineering Challenge - Andrew Avina
+      </h1>
+
+      <nav className="navigation" aria-label="Main Navigation">
+        <button
+          className={currentView === "notifications" ? "active" : ""}
+          onClick={() => setCurrentView("notifications")}
+          aria-pressed={currentView === "notifications"}
         >
-          Learn React
-        </a>
-      </header>
+          Redux Notifications
+        </button>
+        <button
+          className={currentView === "Search" ? "active" : ""}
+          onClick={() => setCurrentView("Search")}
+          aria-pressed={currentView === "Search"}
+        >
+          Search
+        </button>
+      </nav>
+
+      <div className="content">
+        {currentView === "notifications" && <NotificationList />}
+        {currentView === "Search" && (
+          <Search
+            onSearch={handleSearch}
+            placeholder="Search for tutorials..."
+          />
+        )}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
