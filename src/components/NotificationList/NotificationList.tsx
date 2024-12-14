@@ -16,7 +16,7 @@ const NotificationList: React.FC = () => {
   const handleAddNotification = () => {
     const newNotification: AppNotification = {
       id: Date.now().toString(),
-      message: `This is notification ${notifications.length + 1}`,
+      message: `This is notification ${Math.floor(Math.random() * 10000)}`,
     };
     dispatch(addNotification(newNotification));
   };
